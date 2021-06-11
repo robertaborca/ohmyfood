@@ -1,0 +1,22 @@
+.intro {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: $padding-big $padding-regular;
+
+    text-align: $text-align-center;
+    background-color: $bckgr-grey-light;
+
+    &__title {
+        padding-bottom: $padding-medium;
+    }
+
+    &__subtitle {
+        padding-bottom: $padding-regular;
+        color: $color-grey;
+        font-weight: $font-thin;
+    }
+
+}

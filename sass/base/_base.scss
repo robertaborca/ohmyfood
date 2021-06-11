@@ -1,0 +1,28 @@
+@import "../utils/variables";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*  1rem = 10px */
+    font-size: 62.5%; 
+    scroll-behavior: smooth; 
+}
+
+::selection {
+    color: $color-white;
+    background-color: $color-primary;
+}
+
+body {
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}

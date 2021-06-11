@@ -1,0 +1,20 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: $padding-regular;
+    @include shadow($dark-shadow-colour);
+
+
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        font-size: $titles-font-size;
+
+    }
+
+    &__arrow--invisible {
+        display: none;
+    } 
+}

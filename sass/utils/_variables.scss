@@ -1,0 +1,45 @@
+//main colors
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+// black, white & grey
+$color-white: #fff;
+$color-black: #2a2a2a;
+$color-grey: #6f6f6f;
+
+// grey background colors
+$bckgr-grey-dark: rgba(93,93,93,.2);
+$bckgr-grey-light: rgba(242, 242, 242, .6);
+
+//gradients
+$gradient-primary: linear-gradient(to bottom right, $color-secondary, $color-primary);
+
+
+// box-shadow colors
+$dark-shadow-colour: rgba(0,0,0,.3);
+$light-shadow-colour: rgba(0,0,0,.2);
+
+
+// typography
+$font-size-mobile: 1.5rem;
+$font-size-tablet: 1.6rem;
+$font-size-desktop: 1.7rem;
+
+$titles-font-size: 2.5rem;
+$font-bold: 600;
+$font-regular: 500;
+$font-thin: 200;
+
+$text-align-center: center;
+
+
+// spacing
+// padding
+$padding-small: 1.75rem;
+$padding-regular: 2.5rem;
+$padding-medium: 3.5rem;
+$padding-big: 4.5rem;
+
+//border-radius
+$btn-radius: 2.5rem;
