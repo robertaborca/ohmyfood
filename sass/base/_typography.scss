@@ -1,0 +1,11 @@
+@import "../utils/variables";
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: $font-size-mobile;
+    font-weight: $font-regular;
+    text-rendering: optimizeLegibility;
+    line-height: 120%;
+    letter-spacing: .6px;
+    color: $color-black;
+}

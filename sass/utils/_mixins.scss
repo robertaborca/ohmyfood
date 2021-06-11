@@ -1,0 +1,16 @@
+// box-shadow light + dark 
+@mixin shadow($colour) {
+    box-shadow: 3px 3px 4px 3px $colour;
+}
+
+// pseudo-element
+@mixin pseudo-element {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: -1;
+}
