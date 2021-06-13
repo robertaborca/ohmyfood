@@ -1,16 +1,17 @@
 @import "../utils/variables";
 @import "../utils/mixins";
+@import "../utils/maps";
 
 .header {
     display: flex;
     justify-content: center;
-    padding: $padding-regular;
+    padding: map-get($padding, regular);
     @include shadow($dark-shadow-colour);
 
 
     &__logo {
         @include font-family("title");
-        font-size: $titles-font-size;
+        font-size: map-get($font-size, titles);
 
     }
 

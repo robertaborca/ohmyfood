@@ -1,16 +1,17 @@
 @import "../utils/variables";
 @import "../utils/mixins";
+@import "../utils/maps";
 
 .btn {
     border-radius: $rounded-radius;
     position: relative;
     cursor: pointer;
-    padding: $padding-small;
+    padding: map-get($padding, small);
     
     @include shadow($light-shadow-colour);
 
-    background: $gradient-primary;
-    font-weight: $font-thin;
+    background: map-get($background, gradient);
+    font-weight: map-get($font-weight, thin);
 
     z-index: 1;
 
