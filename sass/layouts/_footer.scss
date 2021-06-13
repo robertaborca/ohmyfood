@@ -1,0 +1,30 @@
+@import "../utils/variables";
+@import "../utils/maps";
+
+.footer {
+    padding: map-get($padding, medium)  map-get($padding, small);
+    background-color: map-get($grey-shade, dark-grey);
+    color: map-get($grey-shade, light-grey);
+
+    @include flex-columns;
+    gap: 2rem;
+
+    a {
+        color: map-get($grey-shade, light-grey);
+    }
+
+    &__logo {
+        @include font-family("title");
+        font-size: map-get($font-size , large);
+    }
+
+    &__nav {
+        @include flex-columns;
+        gap: .8rem;
+    }
+
+    &__icons {
+        font-size: map-get($font-size, medium);
+        width: 2.5rem;
+    }
+}

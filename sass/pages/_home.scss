@@ -29,7 +29,7 @@
 
     &__subtitle {
         padding-bottom: map-get($padding, regular);
-        color: $color-grey;
+        color: map-get($grey-shade, grey);
         font-weight: map-get($font-weight, thin);
     }
 
@@ -62,7 +62,6 @@
         @include shadow($light-shadow-colour);
 
          // 1, 2, 3 ::before
-
         &--1::before {
             content: "1";
         }
@@ -90,6 +89,7 @@
         //selected button
         &--selected {
             background-color: map-get($background, color-primary);
+            
             //selected icon
             .instructions__icons--selected {
                 color: $color-primary;
@@ -98,7 +98,7 @@
         //icons
         i {
             flex-basis: 15%;
-            color: $color-grey;
+            color: map-get($grey-shade, grey);
             font-size: map-get($font-size, medium)
         }
 
@@ -156,7 +156,7 @@
 
         i {
             font-size: map-get($font-size, huge);
-            color: $color-grey;
+            color: map-get($grey-shade, grey);
         }
 
     }
@@ -168,6 +168,6 @@
     }
 
     &__locations {
-        color: $color-grey;
+        color: map-get($grey-shade, grey);
     }
 }
