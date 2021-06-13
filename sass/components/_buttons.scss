@@ -2,7 +2,7 @@
 @import "../utils/mixins";
 
 .btn {
-    border-radius: $btn-radius;
+    border-radius: $rounded-radius;
     position: relative;
     cursor: pointer;
     padding: $padding-small;
@@ -30,7 +30,7 @@
 
         @include shadow($dark-shadow-colour);
 
-        border-radius: $btn-radius;
+        border-radius: $rounded-radius;
         background: linear-gradient(to bottom right, lighten($color-secondary, 2), lighten($color-primary, 2));
         opacity: 0;
         transition: opacity 250ms;

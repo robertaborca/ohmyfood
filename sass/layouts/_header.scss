@@ -9,7 +9,7 @@
 
 
     &__logo {
-        font-family: 'Shrikhand', cursive;
+        @include font-family("title");
         font-size: $titles-font-size;
 
     }

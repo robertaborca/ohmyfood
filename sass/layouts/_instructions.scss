@@ -1,0 +1,75 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.instructions {
+    @include flex-columns;
+    gap: 3rem;
+
+    padding: $padding-big $padding-small;
+
+    &__list {
+        @include flex-columns;
+        gap: 2.5rem;
+        font-size: $font-size-smaller;
+    }
+
+    // instructions buttons
+    &__items {
+        @include flex-rows;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: $squared-radius;
+        background-color: $bckgr-grey-light;
+        padding: $padding-small;
+
+        @include shadow($light-shadow-colour);
+
+         // 1, 2, 3 ::before
+
+        &--1::before {
+            content: "1";
+        }
+        &--2::before {
+            content: "2";
+        }
+        &--3::before {
+            content: "3";
+        }
+
+        &::before {
+            position: absolute;
+            left: 1rem;
+            z-index: 2;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: $rounded-radius;
+     
+            background-color: $color-primary;
+            color: $color-white;
+            text-align: $text-align-center;
+            padding: .5rem;
+        }
+
+        //selected button
+        &--selected {
+            background-color: $bckgr-primary-color;
+            //selected icon
+            .instructions__icons--selected {
+                color: $color-primary;
+            }
+    }
+        //icons
+        i {
+            flex-basis: 15%;
+            color: $color-grey;
+            font-size: $font-size-medium;
+        }
+
+        // text
+        span {
+            font-weight: $font-bold;
+            flex-basis: 75%;
+        }          
+    }
+}

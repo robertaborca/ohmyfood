@@ -1,8 +1,9 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: $font-size-mobile;
+    @include font-family("body");
+    font-size: $font-size-smaller;
     font-weight: $font-regular;
     text-rendering: optimizeLegibility;
     line-height: 120%;

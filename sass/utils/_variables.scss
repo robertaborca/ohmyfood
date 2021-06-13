@@ -8,9 +8,11 @@ $color-white: #fff;
 $color-black: #2a2a2a;
 $color-grey: #6f6f6f;
 
-// grey background colors
+// background colors
 $bckgr-grey-dark: rgba(93,93,93,.2);
 $bckgr-grey-light: rgba(242, 242, 242, .6);
+
+$bckgr-primary-color: lighten($color-primary, 35%);
 
 //gradients
 $gradient-primary: linear-gradient(to bottom right, $color-secondary, $color-primary);
@@ -22,9 +24,9 @@ $light-shadow-colour: rgba(0,0,0,.2);
 
 
 // typography
-$font-size-mobile: 1.5rem;
-$font-size-tablet: 1.6rem;
-$font-size-desktop: 1.7rem;
+$font-size-smaller: 1.3rem;
+$font-size-medium: 1.6rem;
+$font-size-large: 1.7rem;
 
 $titles-font-size: 2.5rem;
 $font-bold: 600;
@@ -41,5 +43,9 @@ $padding-regular: 2.5rem;
 $padding-medium: 3.5rem;
 $padding-big: 4.5rem;
 
+// margins
+$gutter-vertical-regular: 3.5rem;
+
 //border-radius
-$btn-radius: 2.5rem;
+$rounded-radius: 2.5rem;
+$squared-radius: 2rem;
