@@ -1,0 +1,34 @@
+@import "./variables";
+
+$font-size: (
+    small: 1.3rem,
+    medium: 1.6rem,
+    large: 1.7rem,
+    huge: 2rem,
+    titles: 2.5rem
+);
+
+$padding: (
+    tiny: 1.5rem,
+    small: 1.75rem,
+    regular: 2.5rem,
+    medium: 3.5rem,
+    large: 4.5rem
+);
+
+
+$font-weight: (
+    thin: 200,
+    regular: 500,
+    bold: 600
+);
+
+
+$background: (
+    white: #fff,
+    dark-grey: rgba(93,93,93,.2),
+    light-grey: rgba(242, 242, 242, .6),
+    color-primary: lighten($color-primary, 35%),
+    gradient: linear-gradient(to bottom right, $color-secondary, $color-primary)
+);
+

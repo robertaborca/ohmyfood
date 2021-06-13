@@ -1,0 +1,173 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../utils/maps";
+
+// ***** LOCATION *****
+.location {
+    background-color: map-get($background, dark-grey);
+    @include flex-rows;
+    justify-content: center;
+    gap: 1rem;
+    padding: map-get($padding, regular);
+}
+
+
+// ***** INTRODUCTION *****
+.intro {
+    @include flex-columns;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: map-get($padding, big) map-get($padding, regular);
+
+    text-align: $text-align-center;
+    background-color: map-get($background, light-grey);
+
+    &__title {
+        padding-bottom: map-get($padding, medium);
+    }
+
+    &__subtitle {
+        padding-bottom: map-get($padding, regular);
+        color: $color-grey;
+        font-weight: map-get($font-weight, thin);
+    }
+
+}
+
+
+// ***** INSTRUCTIONS *****
+.instructions {
+    @include flex-columns;
+    gap: 3rem;
+
+    padding: map-get($padding, large) map-get($padding, small);
+
+    &__list {
+        @include flex-columns;
+        gap: 2.5rem;
+        font-size: map-get($font-size, small);
+    }
+
+    // instructions buttons
+    &__items {
+        @include flex-rows;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: $squared-radius;
+        background-color: map-get($background, light-grey);
+        padding: map-get($padding, small);
+
+        @include shadow($light-shadow-colour);
+
+         // 1, 2, 3 ::before
+
+        &--1::before {
+            content: "1";
+        }
+        &--2::before {
+            content: "2";
+        }
+        &--3::before {
+            content: "3";
+        }
+
+        &::before {
+            position: absolute;
+            left: 1rem;
+            z-index: 2;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: $rounded-radius;
+     
+            background-color: $color-primary;
+            color: $color-white;
+            text-align: $text-align-center;
+            padding: .5rem;
+        }
+
+        //selected button
+        &--selected {
+            background-color: map-get($background, color-primary);
+            //selected icon
+            .instructions__icons--selected {
+                color: $color-primary;
+            }
+    }
+        //icons
+        i {
+            flex-basis: 15%;
+            color: $color-grey;
+            font-size: map-get($font-size, medium)
+        }
+
+        // text
+        span {
+            font-weight: map-get($font-weight, bold);
+            flex-basis: 75%;
+        }          
+    }
+}
+
+// ***** RESTAURANTS LIST *****
+.restaurants {
+    background-color: map-get($background, light-grey);
+    padding: map-get($padding, large) map-get($padding, small);
+
+    @include flex-columns;
+    gap: 2rem;
+
+    &__cards {
+        background-color: map-get($background, white);
+        border-radius: $squared-radius;
+        overflow: hidden;
+        @include shadow($light-shadow-colour);
+
+
+        img {
+            width: 100%;
+            height: 15rem;
+            object-fit: cover;
+            object-position: center;
+
+        }
+
+        &.restaurants__cards--new::before {
+            content: "New";
+            position: absolute;
+            right: 3rem;
+            margin-top: 1.5rem;
+            padding: .5em 2.5rem;
+
+            background-color: $color-tertiary;
+            color: darken($color-tertiary, 35%);
+            font-weight: map-get($font-weight, bold);
+            text-align: $text-align-center;
+            z-index: 2;
+            
+        }
+
+    }
+
+    &__captions {
+        padding: map-get($padding, small);
+        @include flex-columns;
+
+        i {
+            font-size: map-get($font-size, huge);
+            color: $color-grey;
+        }
+
+    }
+
+    &__names {
+        @include flex-rows;
+        justify-content: space-between;
+
+    }
+
+    &__locations {
+        color: $color-grey;
+    }
+}
