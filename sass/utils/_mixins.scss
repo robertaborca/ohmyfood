@@ -1,6 +1,17 @@
 // box-shadow light + dark 
 @mixin shadow($colour) {
-    box-shadow: 3px 3px 4px 3px $colour;
+    box-shadow: 3px 3px 8px 2px $colour;
+}
+
+// font-families 
+
+@mixin font-family($type) {
+    @if $type == "title" {
+        font-family: 'Shrikhand', cursive;
+    }
+    @else {
+        font-family: "Roboto", sans-serif;
+    }
 }
 
 // pseudo-element
@@ -13,4 +24,15 @@
     right: 0;
 
     z-index: -1;
+}
+
+// flexbox column and rows flows
+@mixin flex-columns {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+@mixin flex-rows {
+    display: flex;
+    flex-flow: row wrap;
 }

@@ -4,12 +4,12 @@
 
 /*** COMPONENTS ***/
 @import "./components/buttons";
-@import "./components/intro";
-@import "./components/location";
 
 /*** LAYOUT ***/
 @import "./layouts/header";
-@import "./layouts/nav";
+@import "./layouts/intro";
+@import "./layouts/location";
+@import "./layouts/instructions";
 
 /*** PAGES ***/
 @import "./pages/home";
