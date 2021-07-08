@@ -2,5 +2,90 @@
 @import "../utils/maps";
 
 
-// Gradually fill up hearts add to favorites buttons
+// Dish Selection Tick Animation
+///////////////////////////////////////////////////////////////////
+.menu-item {
+    position: relative;
+    overflow: hidden;
+
+    // animated icon static code
+    &__choice-icon {
+        background-color: $color-tertiary;
+        border-bottom-right-radius: $squared-radius;
+        border-top-right-radius: $squared-radius;
+
+        color: $color-white;
+        font-size: 3rem;
+        text-align: $text-align-center;
+        vertical-align: middle;
+        line-height: 1.2;
+
+        height: 100%;
+        padding: map-get($padding, small);
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        transform: translateX(100%);
+        transition: all 600ms;
+
+        i {
+            transition: all 600ms;
+            transform: rotate(0);
+        }
+    }
+    // animated icon hover state code
+    &:hover > .menu-item__choice-icon {
+        transform: translateX(0);
+
+        i {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    // moving adjacent sibling on hovering
+    &__info {
+        width: 100%;
+        transition: width 600ms;
+    }
+
+    
+
+    &:hover > .menu-item__info,
+    &:hover > .menu-item__dish {
+        width: 75%;
+    }   
+}
+
+// Fade in menu animation
+///////////////////////////////////////////////////////////////////
+
+
+.menu-item {
+    animation: slideup 800ms ease-in-out;
+
+    @for $i from 1 through 10 {
+        $animation-delay: $i * 100ms;
+      
+        &--#{$i} {
+          animation-delay: $animation-delay;
+        }
+      } 
+}
+
+@keyframes slideup {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+
 
