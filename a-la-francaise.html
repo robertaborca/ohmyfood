@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Bastille Restaurant">
+        <meta property="og:description" content="Bastille Restaurant Menu">
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80">
+        <title>Bastille</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;500;600&family=Shrikhand&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
+        <link rel="stylesheet" href="./public/css/style.css" type="text/css">
+    </head>
+
+    <body>
+        <!-- header  -->
+        <header class="header">
+            <a href="./index.html">
+                <i class="header__arrow--visible fas fa-arrow-left"></i>
+            </a>
+            <p class="header__logo">ohmyfood</p>
+        </header>
+
+        <!--Menu-->
+        <main>
+            <section class="restaurant-menu">
+                <!--MENU-->
+                <div class="restaurant-menu__image">
+                    <img src="./public/images/bastille-small.jpg" alt="Bastille restaurant dish" class="restaurant-menu__image">
+                </div>
+
+                <div class="restaurant-menu__card">
+                    <div class="restaurant-menu__title-container">
+                        <h1 class="restaurant-menu__title">Bastille</h1>
+                        <span class="favourites__icons fa-stack">
+                            <i class="favourites__icons--empty far fa-heart fa-stack-1x"></i>
+                            <i class="favourites__icons--full fas fa-heart fa-stack-1x"></i>
+                        </span>
+                    </div>
+
+                <!--BASTILLE -->
+                    <!--ENTREES-->
+                    <h2 class="restaurant-menu__subtitles">Entrees</h2>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Citrus Squid Carpaccio</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">With orange zest</p>
+                            <p class="menu-item__price">25€</p>
+                        </div>
+                    </div>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Grandmother's Vegetable Soup</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">Carrots, parsnips, Jerusalem artichoke</p>
+                            <p class="menu-item__price">35€</p>
+                        </div>
+                    </div>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Onion Soup</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">Rivisited</p>
+                            <p class="menu-item__price">20€</p>
+                        </div>
+                    </div>
+
+
+                    <!--MAIN-->
+                    <h2 class="restaurant-menu__subtitles">Main Dishes</h2>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Scallops</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">With mashed parsnip</p>
+                            <p class="menu-item__price">40€</p>
+                        </div>
+                    </div>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Magret de Canard</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">With mashed potatoes</p>
+                            <span class="menu-item__price">35€</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Game Hen</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">With vegetable gnocchis</p>
+                            <span class="menu-item__price">44€</span>
+                        </div>
+                    </div>
+
+                <!--DESSERTS-->
+                <h2 class="restaurant-menu__subtitles">Desserts</h2>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Florar Ice Cream</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">With hazelnut butter</p>
+                            <span class="menu-item__price">18€</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Chocolate Lava Cake</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">Rivisited</p>
+                            <span class="menu-item__price">22€</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-secondary menu-item">
+                        <h3 class="menu-item__dish">Napolean</h3>
+                        <div class="menu-item__info">
+                            <p class="menu-item__description">With blueberries and marzipan</p>
+                            <span class="menu-item__price">23€</span>
+                        </div>
+                    </div>
+                    
+                    <div class="btn menu-btn">
+                        <a href="#">Order Now</a>
+                    </div>
+
+                </div>
+
+
+        
+            </section>
+        </main>
+
+        <!-- footer  -->
+        <footer class="footer">
+            <a href="./index.html" class="footer__logo">ohmyfood</a>
+            <ul class="footer__nav">
+                <li class="footer__links">
+                    <i class="footer__icons fas fa-utensils"></i>
+                    <a href="#">Suggest a restaurant</a>
+                </li>
+                <li class="footer__links">
+                    <i class="footer__icons fas fa-hands-helping"></i>
+                    <a href="#">Become a partner</a>
+                </li>
+                <li class="footer__links">
+                    <a href="#">Legal</a>
+                </li>
+                <li class="footer__links">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </footer>
+    </body>

@@ -1,9 +1,11 @@
 /*** BASE ***/
+@import "./base/animations";
 @import "./base/base";
 @import "./base/typography";
 
 /*** COMPONENTS ***/
 @import "./components/buttons";
+@import "./components/heart-icons";
 
 /*** LAYOUT ***/
 @import "./layouts/header";
@@ -11,10 +13,7 @@
 
 /*** PAGES ***/
 @import "./pages/home";
-@import "./pages/a-la-francaise";
-@import "./pages/la-delice-des-sens";
-@import "./pages/la-note-enchantee";
-@import "./pages/la-palette-du-gout";
+@import "./pages/menu-pages";
 
 /*** UTILITIES ***/
 @import "./utils/functions";

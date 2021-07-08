@@ -4,18 +4,25 @@
 
 .header {
     display: flex;
-    justify-content: center;
     padding: map-get($padding, regular);
     @include shadow($dark-shadow-colour);
+    text-align: $text-align-center;
 
 
     &__logo {
         @include font-family("title");
         font-size: map-get($font-size, titles);
-
+        justify-self: center;
+        flex-basis: 100%;
     }
 
     &__arrow--invisible {
         display: none;
-    } 
+    }
+    
+    &__arrow--visible {
+        justify-self: flex-start;
+        font-size: map-get($font-size, large);
+        color: map-get($grey-shade, dark-grey);
+    }
 }

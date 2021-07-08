@@ -5,6 +5,7 @@
     padding: map-get($padding, medium)  map-get($padding, small);
     background-color: map-get($grey-shade, dark-grey);
     color: map-get($grey-shade, light-grey);
+    z-index: 1000;
 
     @include flex-columns;
     gap: 2rem;

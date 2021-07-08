@@ -20,7 +20,7 @@
         <!-- header  -->
         <header class="header">
             <a href="./homepage.html">
-                <i class="header__arrow--invisible header__arrow--visible fas fa-arrow-left"></i>
+                <i class="header__arrow--invisible fas fa-arrow-left"></i>
             </a>
             <p class="header__logo">ohmyfood</p>
         </header>
@@ -37,7 +37,7 @@
             <h1 class="intro__title">Book the menu you like</h1>
             <p class="intro__subtitle">Discover top-of-the-art restaurants we picked for you</p>
             <div class="btn">
-                <a href="#">Explore our restaurants</a>
+                <a href="#restaurants">Explore our restaurants</a>
             </div>
         </section>
 
@@ -45,15 +45,15 @@
         <section class="instructions">
             <h2 class="instructions__title">How it works</h2>
             <ul class="instructions__list">
-                <li class="instructions__items instructions__items--1">
+                <li class="btn-secondary instructions__items instructions__items--1">
                     <i class="instructions__icons fas fa-mobile-alt"></i>
                     <span>Choose a restaurant</span>
                 </li>
-                <li class="instructions__items instructions__items--2">
+                <li class="btn-secondary instructions__items instructions__items--2">
                     <i class="instructions__icons fas fa-list-ul"></i>
                     <span>Create your menu</span>
                 </li>
-                <li class="instructions__items instructions__items--3 instructions__items--selected">
+                <li class="btn-secondary instructions__items instructions__items--3 instructions__items--selected">
                     <i class="instructions__icons instructions__icons--selected fas fa-store"></i>
                     <span>Go enjoy it to the restaurant</span>
                 </li>
@@ -61,19 +61,20 @@
         </section>
 
         <!-- restaurants list  -->
-        <section class="restaurants">
+        <section class="restaurants" id="restaurants">
             <h2 class="restaurants__title">Restaurants</h2>
 
             <div class="restaurants__cards restaurants__cards--new">
                 <a href="./la-palette-du-gout.html">
                     <img src="./public/images/the-full-palette-small.jpg" alt="the full palette restaurant dish" class="restaurants__images">
-                    <div class="restaurants__captions">
-                        <h3 class="restaurants__names">
-                            The Full Palette
-                            <span class="restaurants__icons">
-                                <i class="far fa-heart"></i>
+                    <div class="restaurants__info">
+                        <div class="restaurants__names">
+                            <h3>The Full Palette</h3>
+                            <span class="favourites__icons fa-stack">
+                                <i class="favourites__icons--empty far fa-heart fa-stack-1x"></i>
+                                <i class="favourites__icons--full fas fa-heart fa-stack-1x"></i>
                             </span>
-                        </h3>
+                        </div>
                         <p class="restaurants__locations">New York</p>
                     </div>
                 </a>
@@ -82,13 +83,14 @@
             <div class="restaurants__cards restaurants__cards--new">
                 <a href="./la-note-enchantee.html">
                     <img src="./public/images/the-enchanted-plate-small.jpg" alt="The Enchanted Plate restaurant dish" class="restaurants__images">
-                    <div class="restaurants__captions">
-                        <h3 class="restaurants__names">
-                            The Enchanted Plate
-                            <span class="restaurants__icons">
-                                <i class="far fa-heart"></i>
+                    <div class="restaurants__info">
+                        <div class="restaurants__names">
+                            <h3>The Enchanted Plate</h3>
+                            <span class="favourites__icons fa-stack">
+                                <i class="favourites__icons--empty far fa-heart fa-stack-1x"></i>
+                                <i class="favourites__icons--full fas fa-heart fa-stack-1x"></i>
                             </span>
-                        </h3>
+                        </div>
                         <p class="restaurants__locations">New York</p>
                     </div>
                 </a>
@@ -97,13 +99,14 @@
             <div class="restaurants__cards">
                 <a href="./a-la-francaise.html">
                     <img src="./public/images/bastille-small.jpg" alt="Bastille restaurant dish" class="restaurants__images">
-                    <div class="restaurants__captions">
-                        <h3 class="restaurants__names">
-                            Bastille
-                            <span class="restaurants__icons">
-                                <i class="far fa-heart"></i>
+                    <div class="restaurants__info">
+                        <div class="restaurants__names">
+                            <h3>Bastille</h3>
+                            <span class="favourites__icons fa-stack">
+                                <i class="favourites__icons--empty far fa-heart fa-stack-1x"></i>
+                                <i class="favourites__icons--full fas fa-heart fa-stack-1x"></i>
                             </span>
-                        </h3>
+                        </div>
                         <p class="restaurants__locations">New York</p>
                     </div>
                 </a>
@@ -113,13 +116,14 @@
             <div class="restaurants__cards">
                 <a href="./le-delice-des-sens.html">
                     <img src="./public/images/le-gourmand-small.jpg" alt="Le Gourmand restaurant dish" class="restaurants__images">
-                    <div class="restaurants__captions">
-                        <h3 class="restaurants__names">
-                            Le Gourmand
-                            <span class="restaurants__icons">
-                                <i class="far fa-heart"></i>
+                    <div class="restaurants__info">
+                        <div class="restaurants__names">
+                            <h3>Le Gourmand</h3>
+                            <span class="favourites__icons fa-stack">
+                                <i class="favourites__icons--empty far fa-heart fa-stack-1x"></i>
+                                <i class="favourites__icons--full fas fa-heart fa-stack-1x"></i>
                             </span>
-                        </h3>
+                        </div>
                         <p class="restaurants__locations">New York</p>
                     </div>
                 </a>
