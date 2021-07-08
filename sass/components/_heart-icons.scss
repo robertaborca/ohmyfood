@@ -1,0 +1,41 @@
+// heart icons
+.favourites__icons {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: map-get($font-size, huge);
+    cursor: pointer;
+
+    //heart icons animation gradient background
+    &--empty { 
+        &::before {
+            color: map-get($grey-shade, grey);
+            z-index: 1;
+            opacity: 1;
+            transition: opacity 800ms ease-in;
+        }
+
+        &:hover::before {
+            z-index: -1;
+            opacity: 0;
+        }
+    }
+
+    &--full {
+        &::before {
+            background: map-get($background, gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 1200ms ease-out;
+        }
+
+        &:hover::before {
+            z-index: 1;
+            opacity: 1;
+        }
+    }  
+}

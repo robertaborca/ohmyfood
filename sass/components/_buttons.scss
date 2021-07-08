@@ -2,11 +2,15 @@
 @import "../utils/mixins";
 @import "../utils/maps";
 
+
+// PRIMARY BUTTON
 .btn {
     border-radius: $rounded-radius;
     position: relative;
     cursor: pointer;
     padding: map-get($padding, small);
+    width: 20rem;
+    text-align: $text-align-center;
     
     @include shadow($light-shadow-colour);
 
@@ -36,4 +40,15 @@
         opacity: 0;
         transition: opacity 250ms;
     }
+}
+
+
+// SECONDARY BUTTON
+.btn-secondary {
+border-radius: $squared-radius;
+background-color: map-get($background, light-grey);
+padding: map-get($padding, small);
+
+@include shadow($light-shadow-colour);
+
 }

@@ -51,15 +51,9 @@
 
     // instructions buttons
     &__items {
-        @include flex-rows;
         justify-content: center;
         align-items: center;
-
-        border-radius: $squared-radius;
-        background-color: map-get($background, light-grey);
-        padding: map-get($padding, small);
-
-        @include shadow($light-shadow-colour);
+        @include flex-rows;
 
          // 1, 2, 3 ::before
         &--1::before {
@@ -150,23 +144,22 @@
 
     }
 
-    &__captions {
-        padding: map-get($padding, small);
+    // **** restaurant info ****
+    &__info {
+        padding: map-get($padding, tiny);
         @include flex-columns;
-
-        i {
-            font-size: map-get($font-size, huge);
-            color: map-get($grey-shade, grey);
-        }
-
     }
 
+
+    // restaurants names
     &__names {
         @include flex-rows;
         justify-content: space-between;
+        align-items: center;
 
     }
 
+    // restaurants locations
     &__locations {
         color: map-get($grey-shade, grey);
     }

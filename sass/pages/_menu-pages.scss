@@ -1,0 +1,111 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.restaurant-menu {
+    position: relative;
+    // image
+
+
+    &__image {
+        width: 100vw;
+        height: 18rem;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+       
+
+    }
+
+    // restaurant menu card
+    &__card {
+        @include flex-columns;
+        background-color: map-get($background, solid-grey);
+        padding: map-get($padding, medium) map-get($padding, tiny);
+        margin-top: -4rem;
+        border-top-left-radius: $squared-radius;
+        border-top-right-radius: $squared-radius;
+        gap: 1.5rem;
+        z-index: 0;
+        position: relative;
+        top: 2rem;
+        width: 100vw;
+
+    }
+
+    &__title-container {
+        @include flex-rows;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        @include font-family("title");
+        font-size: map-get($font-size, titles);
+    }
+    
+    // sub-sections titles (entrees, main...)
+    &__subtitles {
+        font-size: map-get($font-size, medium);
+        font-weight: map-get($font-weight, thin);
+        color: map-get($grey-shade, grey);
+        text-transform: uppercase;
+    
+        position: relative;
+        margin-top: $gutter-regular;
+        margin-bottom: $gutter-small;
+
+        // decorative titles borders
+        &::after {
+            content: "";
+            width: 4rem;
+            height: 3px;
+            background-color: $color-tertiary;
+            position: absolute;
+            top: 2.2rem;
+            left: 0;
+    
+        }
+    }
+
+}
+
+// single dishes cards
+.menu-item {
+    @include flex-columns;
+    width: 100%;
+    gap: .5rem;
+
+    &__dish {
+        flex-grow: 2;
+    }
+
+    &__info  {
+        @include flex-rows;
+        max-width: 100%;
+    }
+
+    &__description {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        flex: 1;
+
+        color: map-get($grey-shade, grey);
+    }
+
+    &__price {
+        font-weight: map-get($font-weight, bold);
+    }
+
+}
+
+.menu-btn {
+    align-self: center;
+    margin: $gutter-regular 0;
+}
+
+
+
+
+
+
