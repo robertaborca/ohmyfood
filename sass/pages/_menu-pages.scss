@@ -3,17 +3,14 @@
 
 .restaurant-menu {
     position: relative;
+
     // image
-
-
     &__image {
         width: 100vw;
         height: 18rem;
         object-fit: cover;
         object-position: center;
         z-index: -1;
-       
-
     }
 
     // restaurant menu card
@@ -29,7 +26,6 @@
         position: relative;
         top: 2rem;
         width: 100vw;
-
     }
 
     &__title-container {
@@ -71,12 +67,15 @@
 
 // single dishes cards
 .menu-item {
+    cursor: pointer;
     @include flex-columns;
     width: 100%;
     gap: .5rem;
 
     &__dish {
-        flex-grow: 2;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     &__info  {
