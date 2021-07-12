@@ -56,6 +56,16 @@
     &:hover > .menu-item__info,
     &:hover > .menu-item__dish {
         width: 75%;
+
+        // min-width 690px
+        @include media-queries(tablet) {
+            width: 85%;
+        }
+
+        // min-width 1000px
+        @include media-queries(small-desktop) {
+            width: 92%;
+        }
     }   
 }
 
@@ -70,7 +80,7 @@
         &--#{$i} {
           animation-delay: $animation-delay;
         }
-      } 
+      }
 }
 
 @keyframes slideup {

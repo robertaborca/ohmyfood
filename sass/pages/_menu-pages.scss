@@ -2,7 +2,7 @@
 @import "../utils/mixins";
 
 .restaurant-menu {
-    position: relative;
+    @include flex-columns;
 
     // image
     &__image {
@@ -11,25 +11,46 @@
         object-fit: cover;
         object-position: center;
         z-index: -1;
+
+        //min-width 690 px
+        @include media-queries(tablet) {
+            height: 28rem;
+        }
+
+        //min-width 1000 px
+        @include media-queries(small-desktop) {
+            height: 40rem;
+        }
     }
 
     // restaurant menu card
     &__card {
+        max-width: 100vw;
         @include flex-columns;
         background-color: map-get($background, solid-grey);
         padding: map-get($padding, medium) map-get($padding, tiny);
         margin-top: -4rem;
-        border-top-left-radius: $squared-radius;
-        border-top-right-radius: $squared-radius;
+        border-radius: $squared-radius;
         gap: 1.5rem;
-        z-index: 0;
-        position: relative;
-        top: 2rem;
         width: 100vw;
+
+        //min-width 690px
+        @include media-queries(tablet) {
+            margin: -5rem auto 3rem auto;
+            width: 90vw;
+            padding: map-get($padding, large);
+            @include shadow($light-shadow-colour);
+        }
+
+        @include media-queries(large-desktop) {
+            width: 85vw;
+            padding: 5rem;
+        }
     }
 
     &__title-container {
-        @include flex-rows;
+        display: flex;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
     }
@@ -37,6 +58,11 @@
     &__title {
         @include font-family("title");
         font-size: map-get($font-size, titles);
+        line-height: 1.1;
+
+        @include media-queries(small-desktop) {
+            font-size: 3rem;
+        }
     }
     
     // sub-sections titles (entrees, main...)

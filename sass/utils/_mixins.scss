@@ -37,6 +37,19 @@
     flex-flow: row wrap;
 }
 
+// media queries
+@mixin media-queries($breakpoint, $map-breakpoints: $breakpoints) {
+    // If $breakpoint is a key that exists in
+    // $breakpoints, get and use the value
+    @if map-has-key($map-breakpoints, $breakpoint) {
+      $breakpoint: map-get($map-breakpoints, $breakpoint);
+    }
+    
+    @media only screen and (min-width: #{$breakpoint}) {
+      @content;
+    }
+  }
+
 
 
 
