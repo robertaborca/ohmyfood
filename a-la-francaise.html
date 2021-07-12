@@ -35,12 +35,12 @@
             <section class="restaurant-menu">
                 <!--MENU-->
                 <div class="restaurant-menu__image"> 
-                    <img srcset="./public/images/bastille-small.jpg 640w,
-                                 ./public/images/bastille-large.jpg 1968w"
-                         sizes="(min-width: 1000px) 1968w,
-                                640w"   
-                         src="./public/images/bastille-small.jpg" 
-                         alt="Bastille restaurant dish" class="restaurant-menu__image">
+                    <picture>
+                        <source media="(min-width: 1000px)" srcset="./public/images/bastille-large.jpg">
+                        <source media="(max-width: 999px)" srcset="./public/images/bastille-small.jpg">
+                        <img src="./public/images/bastille-small.jpg" alt="Bastille restaurant dish" class="restaurant-menu__image">
+                    </picture>
+
                 </div>
 
                 <div class="restaurant-menu__card">

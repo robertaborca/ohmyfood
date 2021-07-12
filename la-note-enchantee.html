@@ -35,13 +35,11 @@
             <section class="restaurant-menu">
                 <!--MENU-->
                 <div class="restaurant-menu__image">
-                    <img srcset="./public/images/the-enchanted-plate-small.jpg 640w,
-                                ./public/images/the-enchanted-plate-large.jpg 1512w"
-                         sizes="(min-width: 1000px) 1512w,
-                                640w"
-                        src="./public/images/the-enchanted-plate-small.jpg"
-                        alt="The Enchanted Plate restaurant dish" 
-                        class="restaurant-menu__image">
+                    <picture>
+                        <source media="(min-width: 1000px)" srcset="./public/images/the-enchanted-plate-large.jpg">
+                        <source media="(max-width: 999px)" srcset="./public/images/the-enchanted-plate-small.jpg">
+                        <img src="./public/images/the-enchanted-plate-small.jpg" alt="The Enchanted Plate restaurant dish" class="restaurant-menu__image">
+                    </picture>
                 </div>
 
                 <div class="restaurant-menu__card">

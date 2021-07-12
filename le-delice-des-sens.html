@@ -35,13 +35,11 @@
             <section class="restaurant-menu">
                 <!--MENU-->
                 <div class="restaurant-menu__image">
-                    <img srcset="./public/images/le-gourmand-small.jpg 640w,
-                                 ./public/images/le-gourmand-large.jpg 1892w"
-                         sizes="(min-width: 1000px) 1892w,
-                                640w"
-                        src="./public/images/le-gourmand-small.jpg" 
-                        alt="Le Gourmand restaurant dish" 
-                        class="restaurant-menu__image">
+                    <picture>
+                        <source media="(min-width: 1000px)" srcset="./public/images/le-gourmand-large.jpg">
+                        <source media="(max-width: 999px)" srcset="./public/images/le-gourmand-small.jpg">
+                        <img src="./public/images/le-gourmand-small.jpg" alt="Le Gourmand restaurant dish" class="restaurant-menu__image">
+                    </picture>
                 </div>
 
                 <div class="restaurant-menu__card">
