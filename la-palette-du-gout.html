@@ -35,13 +35,11 @@
             <section class="restaurant-menu">
                 <!--MENU-->
                 <div class="restaurant-menu__image">
-                    <img srcset="./public/images/the-full-palette-small.jpg 640w,
-                                 ./public/images/the-full-palette-large.jpg 1651w"
-                         sizes="(min-width: 1000px) 1651w,
-                                640w"
-                    src="./public/images/the-full-palette-small.jpg" 
-                    alt="The full Palette restaurant dish" 
-                    class="restaurant-menu__image">
+                    <picture>
+                        <source media="(min-width: 1000px)" srcset="./public/images/the-full-palette-large.jpg">
+                        <source media="(max-width: 999px)" srcset="./public/images/the-full-palette-small.jpg">
+                        <img src="./public/images/the-full-palette-small.jpg" alt="The full Palette restaurant dish" class="restaurant-menu__image">
+                    </picture>
                 </div>
 
                 <div class="restaurant-menu__card">

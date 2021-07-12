@@ -127,6 +127,13 @@
         @include media-queries(small-desktop) {
             flex-basis: 35%;
         }
+
+        // fallback for gap in previous versions of safari
+        @supports not (gap: 1.5rem) {
+                margin-bottom: 2.5rem;
+                margin-right: 1.5rem;
+            
+        }
     }
     
     // min-width 1000px
