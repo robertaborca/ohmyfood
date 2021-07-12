@@ -10,4 +10,9 @@ body {
     line-height: 120%;
     letter-spacing: .6px;
     color: $color-black;
+
+    // min-width 1000px
+    @include media-queries(small-desktop) {
+        font-size: 1.4rem;
+    }
 }

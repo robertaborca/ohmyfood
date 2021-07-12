@@ -12,6 +12,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;500;600&family=Shrikhand&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous"></script> <!--Font Awesome-->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./public/images/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./public/images/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="./public/images/favicon_io/site.webmanifest">
+
         <link rel="stylesheet" href="./public/css/style.css" type="text/css">
     </head>
 
@@ -28,8 +34,13 @@
         <main>
             <section class="restaurant-menu">
                 <!--MENU-->
-                <div class="restaurant-menu__image">
-                    <img src="./public/images/bastille-small.jpg" alt="Bastille restaurant dish" class="restaurant-menu__image">
+                <div class="restaurant-menu__image"> 
+                    <img srcset="./public/images/bastille-small.jpg 640w,
+                                 ./public/images/bastille-large.jpg 1968w"
+                         sizes="(min-width: 1000px) 1968w,
+                                640w"   
+                         src="./public/images/bastille-small.jpg" 
+                         alt="Bastille restaurant dish" class="restaurant-menu__image">
                 </div>
 
                 <div class="restaurant-menu__card">
